@@ -22,7 +22,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['name', 'email', 'password','bp','fbs'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -30,5 +30,32 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+	/**
+		* Find out if User is an employee, based on if has any roles
+		*
+		* @return boolean
+		*/
+	 public function isAdmin($name)
+	 {
+			 if($name == "Admin"){
+				 return true;
+			 }
+			 return false;
+	 }
+
+	public function isPatient($name)
+	{
+		if($name != "Admin"){
+			return true;
+		}
+
+		return false;
+	}
+
+	public function patient()
+	{
+		return $this->hasOne('App\Patient');
+	}
 
 }
