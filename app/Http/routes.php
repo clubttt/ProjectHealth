@@ -10,17 +10,29 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+//route home
+Route::get('/', 'WelcomeController@index');
 
-Route::get('/home',function(){
-	return redirect()->intended('/');
-}
-		);
+Route::get('home', 'HomeController@index');
 
-Route::get('/', 'HomeController@index');
 
-Route::get('/doc','DataController@doctor');
-//Route::get('/doctor','DataController@postData');
 
+
+Route::group(['prefix' => 'app','middleware'=>'auth'], function()
+{
+  //route admin patient
+  Route::group(['prefix' => 'show'], function()
+  {
+    Route::get('index','App\AppController@index');
+    Route::get('admin','App\AppController@admin');
+    Route::get('admin/{id}','App\AppController@adminUpdate');
+    Route::post('admin/{id}/update','App\AppController@update');
+    Route::get('patient','App\AppController@patient');
+  });
+
+});
+
+//routr auth
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
