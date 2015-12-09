@@ -1,11 +1,6 @@
 <?php
 namespace App\Services\Factory;
-/**
- * Created by PhpStorm.
- * User: 56023_000
- * Date: 07-Dec-15
- * Time: 00:09
- */
+
 class LevelPatientFactory
 {
     public function getLevelPatient($level){

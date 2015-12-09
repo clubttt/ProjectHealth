@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "447649072309b5faa4044d1f3e9ac395",
+    "hash": "b6f7963d8ed0340d453a0aa8db9e4241",
     "content-hash": "d4ca3f9a7475239a8bbec20ebc0faa0d",
     "packages": [
         {
@@ -2737,23 +2737,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828"
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5"
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "extra": {
@@ -2785,7 +2785,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-06 07:21:36"
+            "time": "2015-12-08 07:14:41"
         },
         {
             "name": "sebastian/environment",
